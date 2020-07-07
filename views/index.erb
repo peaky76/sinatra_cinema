@@ -1,0 +1,5 @@
+<h1>Currently showing at Sinatra Cinema:</h1>
+
+<% for film in Film.all() %>
+<h2> <%= film.title %> </h2>
+<% end %>
