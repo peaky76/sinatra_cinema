@@ -1,9 +1,8 @@
 body {
     font-family: Big Caslon, Georgia, 'Times New Roman', Times, serif;
     padding: 0 25%;
-    background-color: #EEC643;
-    color: #141414;
-    /* background-color: #440DOF; */
+    background-color: #FFE8D4;
+    color: #7F055F;
 }
 
 h1, h2 {
@@ -21,5 +20,19 @@ ul {
 }
 
 hr {
-    border: 1px solid #E43F6F;
+    border: 1px solid #45062E;
+}
+
+a {
+    color: #7F055F;
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: bolder;
+    background-color: #EBD2BE;
+}
+
+a:visited {
+    color: #7F055F;
 }
