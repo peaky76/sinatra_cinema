@@ -1,5 +1,9 @@
-<h1>Currently showing at Sinatra Cinema:</h1>
+<h1>Sinatra Cinema</h1>
 
+<h2>Currently showing:</h2>
+
+<ul>
 <% for film in Film.all() %>
-<h2> <%= film.title %> </h2>
+<li> <%= film.title %> </li>
 <% end %>
+</ul>
