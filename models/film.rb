@@ -88,4 +88,14 @@ class Film
         return self.screenings().max_by { |screening| screening.sales_count }
     end
 
+    # Find fns
+
+    def self.find_by_id(id)
+        sql = "SELECT * FROM films
+        WHERE id = $1"
+        values = [id]
+        film_data = SqlRunner.run(sql, values)
+        return film_data.map { |film| Film.new(film) }
+    end
+
 end

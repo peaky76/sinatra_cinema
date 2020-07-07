@@ -9,6 +9,6 @@ get('/films') do
 end
 
 get('/film/:id') do
-    @id = params['id']
+    @film = params['id']
     erb(:film)
 end
