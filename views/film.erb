@@ -1,1 +1,17 @@
-<h1> <%= @id %> </h1>
+<h1>Sinatra Cinema</h1>
+<h2><%= @film.title %> (<%= @film.rating %>) </h2>
+
+Standard Price: £<%= @film.price / 100 %>
+
+<hr/>
+
+<h3>Screenings</h3>
+<ul>
+<% if @film.screenings.count > 0 %>
+<% for screening in @film.screenings %>
+<li><%= screening.date_time.strftime("%H:%M") %> on <%= screening.date_time.strftime("%-d %b %Y") %> in Screen <%= screening.screen %></li>
+<% end%>
+<% else %>
+Sorry, there are no current screenings for this film.
+<% end %>
+</ul>

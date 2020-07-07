@@ -9,6 +9,6 @@ get('/films') do
 end
 
 get('/film/:id') do
-    @film = params['id']
+    @film = Film.find_by_id(params['id'])
     erb(:film)
 end

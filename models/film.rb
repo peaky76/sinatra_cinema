@@ -95,7 +95,8 @@ class Film
         WHERE id = $1"
         values = [id]
         film_data = SqlRunner.run(sql, values)
-        return film_data.map { |film| Film.new(film) }
+        film = film_data.map { |film| Film.new(film) }
+        return film.first()
     end
 
 end

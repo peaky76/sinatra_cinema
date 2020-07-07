@@ -61,4 +61,12 @@ class Screening
         return @date_time.hour <= 17
     end
 
+    def screen()
+        sql = "SELECT number FROM screens
+        WHERE id = $1"
+        values = [@screen_id]
+        result = SqlRunner.run(sql, values).first()
+        return result['number']
+    end
+
 end
