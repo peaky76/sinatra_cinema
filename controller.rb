@@ -7,3 +7,8 @@ also_reload('./models/*')
 get('/films') do
     erb(:index)
 end
+
+get('/film/:id') do
+    @id = params['id']
+    erb(:film)
+end
