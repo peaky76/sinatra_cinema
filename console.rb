@@ -21,7 +21,8 @@ customers.each { |customer| customer.save() }
 film_1 = Film.new( {'title' => 'The Godmother Part III', 'price' => 900, 'rating' => 18} )
 film_2 = Film.new( {'title' => 'Badfellas', 'price' => 800, 'rating' => 18} )
 film_3 = Film.new( {'title' => 'The Good, The Bad and The Average-Looking', 'price' => 1200, 'rating' => 15} )
-films = [film_1, film_2, film_3]
+film_4 = Film.new( {'title' => 'Pleasant Dream on Elm Street', 'price' => 800, 'rating' => 15} )
+films = [film_1, film_2, film_3, film_4]
 films.each { |film| film.save() }
 
 screen_1 = Screen.new( {'number' => 1, 'capacity' => 50} )
